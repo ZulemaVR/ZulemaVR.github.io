@@ -1,0 +1,116 @@
+ul.actions {
+  margin: 0;
+}
+
+#zulema-profile {
+  border-radius: 40px;
+  max-width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+.outreach-image {
+  max-width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#investigal-logo {
+  border-radius: 40px;
+  max-width: 50%;
+  padding-top: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+#genially {
+  display: none;
+}
+
+#home-mobile p {
+  margin: 0 0 0.5rem 0;
+}
+
+.experience p {
+    margin: 0 0 0.75rem 0;
+}
+
+.wrapper.style1 .content {
+    padding: 4rem;
+}
+
+.wrapper > header {
+    background: #A9D18E;
+    padding-bottom: 15px;
+    padding-top: 0px;
+}
+
+#header > .logo a {
+  color: #54a354;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#header > .logo span {
+  color: black;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.actions {
+    padding-top: 12px;
+}
+
+body {
+    padding-top: 4rem;
+    font-family: "Trebuchet MS" !important;
+}
+
+strong, b {
+    font-weight: 300;
+}
+
+.publications li {
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: #54a354;
+    text-decoration: none;
+}
+
+.profile-info {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#footer a {
+    color: #bbb;
+}
+
+@media only screen and (min-width: 736px) {
+  #genially {
+    display: block;
+  }
+
+  #home-mobile {
+    display: none;
+  }
+
+  .button {
+    margin-top: 15px;
+  }
+
+  .actions {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .outreach-image {
+    max-width: 50%;
+  }
+}
