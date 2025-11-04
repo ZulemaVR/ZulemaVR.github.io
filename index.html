@@ -8,26 +8,45 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <!-- Add font-awesome from CDN because the USC Server fails to serve the own fa sources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    
-       <style>
-  /* Fondo blanco SOLO para la portada */
-  #one,
-  #one.wrapper { background:#ffffff !important; }
+      <style>
+/* Fondo blanco solo en la portada */
+#one,
+#one.wrapper {
+  background: #ffffff !important;
+  position: relative;
+  z-index: 1;
+}
 
-  /* El tema mete un overlay con :before/:after → lo quitamos */
-  #one::before,
-  #one::after,
-  #one.wrapper::before,
-  #one.wrapper::after {
-    content:none !important;
-    background:none !important;
-  }
+/* Elimina overlays e imágenes del tema */
+#one::before,
+#one::after,
+#one.wrapper::before,
+#one.wrapper::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
 
-  /* Por si el tema colorea el interior */
-  #one .inner { background:#ffffff !important; }
-  #one .inner::before,
-  #one .inner::after { content:none !important; background:none !important; }
+/* Fuerza que nada debajo meta color */
+#main,
+#main::before,
+#main::after {
+  background: #ffffff !important;
+}
+
+/* Quita color de .inner y contenedor */
+#one .inner,
+#one .content {
+  background: #ffffff !important;
+}
+
+/* Borra posibles sombras verdes residuales */
+body,
+html {
+  background: #e9e9e9 !important; /* gris neutro para el marco fuera */
+}
 </style>
+
 
 
   </head>
