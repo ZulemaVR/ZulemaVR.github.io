@@ -9,20 +9,36 @@
     <!-- Add font-awesome from CDN because the USC Server fails to serve the own fa sources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     
-    <style>
-       /* --- Fondo blanco para la sección principal --- */
-      .wrapper.style1,
-      .wrapper.style1:before,
-      .wrapper.style1:after {
-       background: #ffffff !important;
-       background-color: #ffffff !important;
-     }
+       <style>
+  /* Forzar fondo BLANCO en la sección principal y anular overlays del tema */
+  section#one,
+  section#one.wrapper,
+  section#one.wrapper.style1 {
+    background:#ffffff !important;
+  }
+  section#one::before,
+  section#one::after,
+  section#one.wrapper.style1::before,
+  section#one.wrapper.style1::after {
+    background:none !important;
+  }
 
-     #main .inner,
-     #one .inner {
-       background: #ffffff !important;
-    }
-    </style>
+  /* A veces el tema pinta el fondo en .inner o sus pseudo-elementos */
+  section#one .inner,
+  #main .inner {
+    background:#ffffff !important;
+  }
+  section#one .inner::before,
+  section#one .inner::after {
+    background:none !important;
+  }
+
+  /* Por si el tema colorea el contenedor de contenido */
+  section#one .content {
+    background:#ffffff !important;
+  }
+</style>
+
 
   </head>
   <body class="">
@@ -31,7 +47,7 @@
     </header>
     <section id="main">
       <div class="inner">
-        <section id="one" class="wrapper style1" style="background-color:#ffffff;" >
+        <section id="one" class="wrapper" style="background-color:#ffffff;" >
           <div class="image fit flush">
             <img alt="" src="images/header01.png">
           </div>
