@@ -4,49 +4,44 @@
     <title>Zulema Varela Río, Postdoctoral Researcher</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=5">
+    <link rel="stylesheet" href="assets/css/custom.css?v=5">
     <!-- Add font-awesome from CDN because the USC Server fails to serve the own fa sources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
       <style>
-/* Fondo blanco solo en la portada */
+/* --- Fondo blanco solo en la portada (About me) --- */
 #one,
-#one.wrapper {
+#one.wrapper,
+#main,
+#main > .inner,
+#main > .inner > section#one,
+section#one,
+section#one .inner,
+section#one .content {
   background: #ffffff !important;
+  background-image: none !important;
   position: relative;
   z-index: 1;
 }
 
-/* Elimina overlays e imágenes del tema */
+/* --- Elimina overlays e imágenes del tema (que ponen el verde) --- */
 #one::before,
 #one::after,
 #one.wrapper::before,
-#one.wrapper::after {
+#one.wrapper::after,
+section#one::before,
+section#one::after {
   content: none !important;
   display: none !important;
   background: none !important;
 }
 
-/* Fuerza que nada debajo meta color */
-#main,
-#main::before,
-#main::after {
-  background: #ffffff !important;
-}
-
-/* Quita color de .inner y contenedor */
-#one .inner,
-#one .content {
-  background: #ffffff !important;
-}
-
-/* Borra posibles sombras verdes residuales */
+/* --- Fondo del resto de la página (marco exterior) --- */
 body,
 html {
-  background: #e9e9e9 !important; /* gris neutro para el marco fuera */
+  background: #e9e9e9 !important; /* gris suave, puedes cambiar a #fff si quieres blanco total */
 }
 </style>
-
 
 
   </head>
