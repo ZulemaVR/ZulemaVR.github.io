@@ -10,33 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     
        <style>
-  /* Forzar fondo BLANCO en la sección principal y anular overlays del tema */
-  section#one,
-  section#one.wrapper,
-  section#one.wrapper.style1 {
-    background:#ffffff !important;
-  }
-  section#one::before,
-  section#one::after,
-  section#one.wrapper.style1::before,
-  section#one.wrapper.style1::after {
+  /* Fondo blanco SOLO para la portada */
+  #one,
+  #one.wrapper { background:#ffffff !important; }
+
+  /* El tema mete un overlay con :before/:after → lo quitamos */
+  #one::before,
+  #one::after,
+  #one.wrapper::before,
+  #one.wrapper::after {
+    content:none !important;
     background:none !important;
   }
 
-  /* A veces el tema pinta el fondo en .inner o sus pseudo-elementos */
-  section#one .inner,
-  #main .inner {
-    background:#ffffff !important;
-  }
-  section#one .inner::before,
-  section#one .inner::after {
-    background:none !important;
-  }
-
-  /* Por si el tema colorea el contenedor de contenido */
-  section#one .content {
-    background:#ffffff !important;
-  }
+  /* Por si el tema colorea el interior */
+  #one .inner { background:#ffffff !important; }
+  #one .inner::before,
+  #one .inner::after { content:none !important; background:none !important; }
 </style>
 
 
