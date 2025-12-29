@@ -114,3 +114,11 @@ a {
     max-width: 50%;
   }
 }
+#timeline {
+  padding: 10px;
+}
+
+.embed-canva {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
